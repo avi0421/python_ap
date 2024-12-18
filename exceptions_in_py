@@ -1,0 +1,45 @@
+'''
+In Python, an exception is an event that occurs during the execution of a program, 
+disrupting its normal flow. 
+Exceptions typically arise due to errors such as invalid input, division by zero, or accessing invalid indices in a list.
+
+Common Exceptions in Python
+1. ZeroDivisionError: Raised when dividing by zero.
+print(10/0) # ZeroDivisionError
+
+2. TypeError: Raised when an operation is applied to an object of an inappropriate type.
+print('10'+5) # TypeError
+
+3. ValueError: Raised when a function receives an argument of the right type but an inappropriate value.
+int("abc") # ValueError
+
+4. IndexError: Raised when trying to access an index outside the range of a list.
+Ist = [1, 2, 3]
+print(Ist[5]) # IndexError
+
+5. KeyError: Raised when trying to access a non-existent key in a dictionary.
+d = {"key": "value"}
+print(d["no_key"]) # KeyError
+
+Handling Exceptions
+You can handle exceptions using a try-except block:
+try:
+x = 10/0
+except ZeroDivisionError:
+print("You can't divide by zero!")
+
+Raising Exceptions
+You can raise your own exceptions using the raise keyword:
+x = -1
+if x < 0:
+raise ValueError("Negative numbers are not allowed!")
+
+Custom Exceptions
+You can define your own exceptions by subclassing the Exception class:
+class MyCustomError(Exception):
+    pass
+try:
+    raise MyCustomError("Something went wrong!")
+except MyCustomError as e:
+    print(e)
+'''
